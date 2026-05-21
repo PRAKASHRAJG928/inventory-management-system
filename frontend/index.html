@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Inventory Management</h1>
+
+    <form id="itemForm">
+      <input
+        type="text"
+        id="name"
+        placeholder="Item Name"
+        required
+      />
+
+      <select id="itemType" required>
+        <option value="">Select Type</option>
+        <option value="1">Electronics</option>
+        <option value="2">Furniture</option>
+        <option value="3">Clothing</option>
+        <option value="4">Books</option>
+        <option value="5">Sports</option>
+      </select>
+
+      <input
+        type="date"
+        id="purchaseDate"
+        required
+      />
+
+      <label>
+        <input type="checkbox" id="stockAvailable" />
+        Stock Available
+      </label>
+
+      <button type="submit">Add Item</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Purchase Date</th>
+          <th>Stock</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
